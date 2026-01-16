@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #3c684d;
+}
+
+body {
+    background-color: #E2F1E7;
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    letter-spacing: 0.7px;
+}
+
+.form-container {
+    padding: 10px;
+}
+
+form {
+    width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+
+.name-container {
+    display: flex;
+    gap: 20px;
+}
+
+.firstname-input,
+.lastname-input {
+    flex: 1;
+}
+
+.firstname-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lastname-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #0c7d69;
+}
+
+.name-inputs {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #5d9373;
+    transition: border-color 0.2s ease;
+}
+
+/* email */
+.email-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.email-input {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #5d9373;
+    transition: border-color 0.2s ease;
+}
+
+/* query  */
+
+.query-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section-label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.query-options {
+    display: flex;
+    gap: 15px;
+}
+
+.query-card {
+    flex: 1;
+    border: 1px solid #8aa3a0;
+    border-radius: 8px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.query-card input[type="radio"] {
+    accent-color: #0b7a66;
+}
+
+.query-card:hover {
+    border-color: #0b7a66;
+}
+
+.query-card input[type="radio"]:checked+span {
+    font-weight: 600;
+}
+
+.query-card:has(input:checked) {
+    border-color: #0b7a66;
+}
+
+.query-card:has(input:checked) {
+    border-color: #0b7a66;
+    background-color: #dcf1ea;
+}
+
+/* message */
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message-container textarea {
+    border-radius: 5px;
+    height: 90px;
+    resize: none;
+    transition: border-color 0.2s ease;
+}
+
+/* consent */
+
+.consent-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.consent-container input[type="checkbox"] {
+    --webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #538c6b;
+    outline: none;
+    cursor: pointer;
+    accent-color: #538c6b;
+}
+
+/* button */
+.submit {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #0c7d69;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    letter-spacing: 0.9px;
+    transition: 0.3s ease;
+}
+
+.submit:hover {
+    background-color: #0a3b32;
+}
+
+.error {
+    color: #b42318;
+    font-size: 12px;
+}
+
+.input-error {
+    border: 2px solid #b42318 !important;
+}
+
+.name-inputs:hover,
+.email-input:hover,
+.query-card:hover,
+.message-container textarea:hover {
+    cursor: pointer;
+    border: 2px solid;
+    border-color: var(--primary-color);
+}
+
+.success-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    background-color: #243f3b;
+    color: #fff;
+    padding: 16px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    z-index: 1000;
+}
+
+.success-message.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.success-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.check-icon {
+    background-color: #3fae8f;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-content p {
+    margin: 4px 0 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+
+@media (max-width: 640px) {
+    form {
+        width: 100%;
+    }
+
+    .name-container,
+    .query-options {
+        flex-direction: column;
+    }
+}

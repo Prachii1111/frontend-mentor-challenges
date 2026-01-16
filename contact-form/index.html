@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Form</title>
+</head>
+<body>
+    <main>
+        <div class="success-message" id="successMessage">
+            <div class="success-content">
+                <span class="check-icon"><i class="fa-regular fa-circle-check"></i></span>
+                <div>
+                    <strong>Message Sent!</strong>
+                    <p>Thanks for completing the form. We'll be in touch soon!</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-container">
+            <form novalidate>
+            <h1>Contact Us</h1>
+            <div class="name-container">
+                <div class="firstname-input">
+                    <label for="firstname">First Name *</label>
+                    <input type="text" name="firstname" id="firstname" class="name-inputs" required>
+                    <small class="error"></small>
+                </div>
+                <div class="lastname-input">
+                    <label for="lastname">Last Name *</label>
+                    <input type="text" name="lastname" id="lastname" class="name-inputs" required>
+                    <small class="error"></small>
+                </div>
+            </div>
+
+            <div class="email-container">
+                <label for="email">Email Address *</label>
+                <input type="email" name="email" id="email" class="email-input" required>
+                <small class="error"></small>
+            </div>
+
+            <div class="query-container">
+                <label class="section-label">Query Type *</label>
+
+                <div class="query-options">
+                    <label class="query-card">
+                        <input type="radio" name="query" id="query-general" value="general">
+                        <span>General Enquiry</span>
+                    </label>
+
+                    <label class="query-card">
+                        <input type="radio" name="query" id="query-support" value="support">
+                        <span>Support Request</span>
+                    </label>
+                </div>
+
+                <small class="error"></small>
+            </div>
+
+            <div class="message-container">
+                <label for="message">Message *</label>
+                <textarea name="message" id="message"></textarea>
+                <small class="error"></small>
+            </div>
+            <!-- <small class="error"></small> -->
+
+            <div class="consent-container">
+                <div class="consent-row">
+                    <input type="checkbox" id="consent" >
+                    <label for="consent">I consent to being contacted by the team *</label>
+                </div>
+                <small class="error"></small>
+            </div> 
+            <!-- <small class="error"></small> -->
+
+            <button class="submit" type="submit">Submit</button>
+            
+        </form>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
